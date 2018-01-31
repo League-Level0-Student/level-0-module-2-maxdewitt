@@ -1,9 +1,12 @@
 //    Copyright (c) The League of Amazing Programmers 2013-2017
+
 //    Level 0
 
 package random;
 
 import java.util.Random;
+
+import javax.swing.JOptionPane;
 
 //1. Run the program.  What number appears in the console?
 //   Run it again. Is the number the same?

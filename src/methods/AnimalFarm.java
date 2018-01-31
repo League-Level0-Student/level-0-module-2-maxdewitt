@@ -3,6 +3,7 @@ package methods;
 //Copyright (c) The League of Amazing Programmers 2013-2017
 //Level 0
 
+import javax.swing.JOptionPane;
 
 import java.io.File;
 
@@ -18,8 +19,21 @@ AnimalFarm() {
 	 * 1. Ask the user which animal they want, then play the sound of that
 	 * animal.
 	 */
-
-	/* 2. Make it so that the user can keep entering new animals. */
+   //String animal = JOptionPane.showMessageDialog(null, "Pick an animal");
+	int animal = JOptionPane.showOptionDialog(null, "Choose an animal", "Animal Farm", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] {"Dog", "Duck", "Cow" , "Cat"}, null);
+	System.out.println(animal);
+	if (animal == 0){
+		playWoof();
+	}
+	else if (animal == 1){
+		playQuack();
+	}
+	else if (animal == 2){
+		playMoo();
+	}
+	else if (animal == 3){
+		playMeow();
+	}
 }
 
 void playMoo() {
@@ -32,6 +46,11 @@ void playQuack() {
 
 void playWoof() {
 	playNoise(woofFile);
+	
+}
+
+void playMeow() {
+	playNoise(meowFile);   
 }
 
 String quackFile = "quack.wav";
